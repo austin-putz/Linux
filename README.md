@@ -8,8 +8,9 @@ Summary of blupf90.sh:
 blupf90.sh is a bash script that is designed to make your life easy
 when working with the blupf90 family of programs. It was 
 developed in Ubuntu 14.04. Please let me know if there are
-conflicts with other OS's (especially linux as I assume most
-are done on Linux servers). Sorry Windows people out there. 
+conflicts with other OS's (especially Linux as I assume most
+are done on Linux servers, but Mac is common as well and
+runs bash). Sorry Windows people out there. 
 If you can write a comparable batch file that does the 
 same thing I would love to see it. 
 
