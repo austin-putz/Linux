@@ -153,18 +153,18 @@ if [[ $program == thrgibbs1f90 ]]; then
 
 	else
 
-		printf "\n\tERROR: One of the options needed for thrgibbs was forgotten\n" >&2
+		printf "\n\t\tERROR: One of the options needed for thrgibbs was forgotten\n" >&2
 		exit 1
 
 	fi
 
-	echo $n_samples
-	echo $burnin
-	echo $store
+	printf "\n\t\tThe number of samples:\t%s" $n_samples
+	printf "\n\t\tThe burnin was:\t\t%s" $burnin
+	printf "\n\t\tStore every:\t\t%s" $store
 
 	if [ $n_samples -gt 1 ] && [ $n_samples -lt 10000000 ]; then
 
-		printf "\n\t\tThe number of samples is acceptable"
+		printf "\n\t\tThe number of samples is acceptable\n"
 
 	else
 
@@ -781,7 +781,22 @@ EOF
 		fi
 
 		# Edit data for each trait (need to remove all records with both values missing)
-		awk '!($'"$i"' == '"$missing"' && $'"$j"' == '"$missing"') { print }' $DATAFILE > subset.data
+		if [[ $program == aireml ]]; then
+
+			# airemlf90 can handle missing values in one of the two response variables
+			awk ' !($'"$i"' == '"$missing"' && $'"$j"' == '"$missing"') { print } ' $DATAFILE > subset.data
+
+		elif [[ $program == thrgibbs1f90 ]]; then
+
+			# thrgibbs1f90 CANNOT handle missing values in either of the two response variables
+			awk ' !($'"$i"' == '"$missing"' || $'"$j"' == '"$missing"') { print } ' $DATAFILE > subset.data
+
+		else
+
+			printf "\n\tERROR: program was not recognized\n\n" &>2
+			exit 1
+
+		fi
 
 		# Print the number of records in the subset dataset
 		n_records_dataset=`awk ' END { print NR } ' subset.data`
