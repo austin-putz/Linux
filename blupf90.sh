@@ -18,19 +18,19 @@ cd .
 #====================================================================================================#
 
 # Options you can specify
-# 	-a 		= application program
-# 	-s 		= start of columns
-# 	-e 		= end of columns
+# 	-a		= application program
+# 	-s		= start of columns
+# 	-e		= end of columns
 # 	-p		= parameter file
-#		    	make sure "trait1" are specified in the parameter file under TRAITS
-#   -pd     = parameter file directory
+#				make sure "trait1" are specified in the parameter file under TRAITS
+# 	-pd		= parameter file directory
 # 	-d		= data file
 # 	-h		= header file (default name is "header")
-#   -b		= basename for output files
-#   -m 		= missing observation
-#   -o		= output directory
-#   -acc	= get accuracies using accf90
-#   -gs		= genomic script (changes accf90 to accf90GS and naming of files)
+# 	-b		= basename for output files
+# 	-m 		= missing observation
+# 	-o		= output directory
+# 	-acc	= get accuracies using accf90
+# 	-gs		= genomic script (changes accf90 to accf90GS and naming of files)
 
 #====================================================================================================#
 # Set Options
@@ -49,7 +49,7 @@ if [ -z $1 ]; then        # check to see if any options are even given
 	printf "\t-s     = starting column of response variables\n" 1>&2
 	printf "\t-e     = ending column of response variables\n" 1>&2
 	printf "\t-p     = parameter file\n" 1>&2
-	printf "\t-pd	 = parameter file directory\n" 1>&2
+	printf "\t-pd    = parameter file directory\n" 1>&2
 	printf "\t-d     = data file\n" 1>&2
 	printf "\t-h     = header file\n" 1>&2
 	printf "\t-b     = basename for files\n" 1>&2
