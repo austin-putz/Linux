@@ -41,11 +41,13 @@ it works by yourself by looking at my code.
 
 Will change the format from:
 
-1     1020201020
-2     1010202010
+  1     1020201020 
+  
+  2     1010202010
 
 to:
-1     1 0 2 0 2 0 1 0 2 0
-2     1 0 1 0 2 0 2 0 1 0
+  1     1 0 2 0 2 0 1 0 2 0 
+  
+  2     1 0 1 0 2 0 2 0 1 0
 
 
