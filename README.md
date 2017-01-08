@@ -3,7 +3,7 @@
 This page will hopefully include helpful Unix/Linux scripts for 
 animal breeders and data analysts.
 
-Summary of blupf90.sh:
+# Summary of blupf90.x.x.sh:
 
 blupf90.sh is a bash script that is designed to make your life easy
 when working with the blupf90 family of programs. It was 
@@ -36,5 +36,16 @@ speed up the documentation process. If not I may not
 worry about it until someone does... If you are
 good with bash scripts, you can probably figure out how 
 it works by yourself by looking at my code.
+
+## fmtGenoR.sh
+
+Will change the format from:
+
+1     1020201020
+2     1010202010
+
+to:
+1     1 0 2 0 2 0 1 0 2 0
+2     1 0 1 0 2 0 2 0 1 0
 
 
