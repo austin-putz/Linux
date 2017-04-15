@@ -24,4 +24,9 @@ to:
   
 This makes it possible to read it into your favorite language easier (R, Python, Julia, etc). 
 
+## ssh guide
+
+This guide should help new users with ssh. It's the guide I use everytime I forget how to 
+ssh from my Mac to my Ubuntu machine, but should work for any UNIX/Linux system I think. 
+
 
