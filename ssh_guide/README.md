@@ -36,18 +36,17 @@ sudo apt-get install openSSH-server
 Steps to success for Mac to Ubuntu ssh:
 
   1) `$ ssh-keygen -t rsa` (on host, Ubuntu)
-  		-) Enter passphrase (2x)
+  		* Enter passphrase (2x)
 
   2) change permissions, `$ chmod 600` for both private/public key (on host)
 
-  3) add pubkey to authorized keys by just copy/paste with vi or any text 
-  		editor (on host)
+  3) add pubkey to authorized keys by just copy/paste with vi or any text editor (on host)
 
   4) add "sshd_config" file (on host)
-  		-) PermitRootLogin no
-  		-) PubkeyAuthentication yes
-  		-) RSAAuthentication yes
-  		-) X11forwarding yes
+  		* PermitRootLogin no
+  		* PubkeyAuthentication yes
+  		* RSAAuthentication yes
+  		* X11forwarding yes
 
   5) transfer private key to Mac (to remote, email)
 
