@@ -33,7 +33,7 @@ ssh from my Mac to my Ubuntu machine, but should work for any UNIX/Linux system 
 
 This will highlight certain file extensions certain colors. You can add or change your own in the script. 
 
-[Screenshot](/Linux/Screenshots/dir_colors_screenshot.png)
+![](/Linux/Screenshots/dir_colors_screenshot.png)
 
 ## gnuplot
 
