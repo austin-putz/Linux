@@ -1,0 +1,59 @@
+#==============================================================================#
+# How to ssh from Mac to Ubuntu Server
+#==============================================================================#
+
+#========================================#
+# Commands
+#========================================#
+
+vi sshd_config 
+vi ssh_config 
+
+# restart ssh after installing or editing
+sudo restart ssh (host)
+sudo systemctl restart ssh
+
+# check ssh
+sudo service ssh status (host)
+
+#========================================#
+# Install Software on Host
+#========================================#
+
+# Must install software on host (Ubuntu machine)
+sudo apt-get install openSSH-client 
+sudo apt-get install openSSH-server
+
+#========================================#
+# Steps to Success
+#========================================#
+
+# Steps to success for Mac to Ubuntu ssh
+
+  *) ssh-keygen -t rsa (on host, Ubuntu)
+  		-) Enter passphrase (2x)
+
+  *) change permissions, chmod 600 for both private/public key (on host)
+
+  *) add pubkey to authorized keys by just copy/paste with vi or any text 
+  		editor (on host)
+
+  *) add "sshd_config" file (on host)
+  		-) PermitRootLogin no
+  		-) PubkeyAuthentication yes
+  		-) RSAAuthentication yes
+  		-) X11forwarding yes
+
+  *) transfer private key to Mac (to remote, email)
+
+  *) set chmod 600 for that key (on remote, make it private)
+
+  *) "ssh-add key_name" on Mac (remote?)
+
+  *) Add key name to config file (on remote)
+
+  *) restart server ssh with "$ sudo service ssh restart" (on host)
+  
+  *) connect from Mac with "ssh -Y username@IPaddress" or use the hostname after @
+
+
