@@ -15,4 +15,6 @@ eval $(dircolors ~/.dir_colors)
 
 And then you should see:
 
+![](/Linux/Screenshots/extension_highlighting.png)
+
 
