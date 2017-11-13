@@ -15,6 +15,6 @@ eval $(dircolors ~/.dir_colors)
 
 And then you should see:
 
-![](/Linux/Screenshots/extension_highlighting.png)
+![](/Linux/File_Extension_Highlighting/extension_highlighting.png)
 
 
