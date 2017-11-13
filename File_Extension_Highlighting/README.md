@@ -17,4 +17,10 @@ And then you should see:
 
 ![](extension_highlighting.png)
 
+If you go into the .dircolors file on your server, you can see the extensions that are highlighted. You can set the colors however you want. I believe the first 2 numbers 00 or 01 is with and without bolding. The second set after the `;` is the color itself. If you have a new one, just edit this file by adding
 
+```bash
+.new 00;31
+```
+
+in the `.dircolors` file. 
