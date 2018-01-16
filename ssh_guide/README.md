@@ -2,12 +2,20 @@
 
 Guide to ssh on Linux. 
 
+Most everything should be contained in your `.ssh/` folder from your `$HOME` directory. If you are not familiar this, it would be in your `/Users/username/` folder on Mac or `/home/username/` folder on Ubuntu (Linux). The three main files are `authorized_keys`, `known_hosts`, and `sshd_config`. Public keys get added to your `authorized_keys` file (as text). You can edit the `sshd_config` file to change many settings that you will need to make your computer safer and easier to use off ssh. 
 
-## Commands
+# Install Software on Host
 
 ```bash
-vi sshd_config 
-vi ssh_config 
+# Must install software on host (Ubuntu machine)
+sudo apt-get install openssh-client 
+sudo apt-get install openssh-server
+```
+
+# check ssh
+
+```bash
+sudo service ssh status (host)
 ```
 
 # restart ssh after installing or editing
@@ -17,18 +25,11 @@ sudo restart ssh (host)
 sudo systemctl restart ssh
 ```
 
-# check ssh
+# Files to edit
 
 ```bash
-sudo service ssh status (host)
-```
-
-## Install Software on Host
-
-```bash
-# Must install software on host (Ubuntu machine)
-sudo apt-get install openssh-client 
-sudo apt-get install openssh-server
+vi sshd_config 
+vi ssh_config 
 ```
 
 ## Steps to Success
