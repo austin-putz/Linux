@@ -4,6 +4,13 @@ Guide to ssh on Linux.
 
 Most everything should be contained in your `.ssh/` folder from your `$HOME` directory. If you are not familiar this, it would be in your `/Users/username/` folder on Mac or `/home/username/` folder on Ubuntu (Linux). The three main files are `authorized_keys`, `known_hosts`, and `sshd_config`. Public keys get added to your `authorized_keys` file (as text). You can edit the `sshd_config` file to change many settings that you will need to make your computer safer and easier to use off ssh. 
 
+Use the following links for your GitHub account!
+
+1. [Get a key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+2. [Add key to your account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+
+Then you should be good to go!
+
 # Install Software on Host
 
 ```bash
