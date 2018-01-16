@@ -48,7 +48,7 @@ Steps to success for Mac to Ubuntu ssh:
 
   2) change permissions, `$ chmod 600` for both private/public key (on host)
 
-  3) add pubkey to authorized keys by just copy/paste with vi or any text editor (on host)
+  3) add pubkey to authorized keys by just copy/paste with vi or any text editor (on host Ubuntu)
       * For this you should just be able to do `cat key_name.pub >> authorized_keys`
       
       ![authorized_keys file](/ssh_guide/authorized_keys.png?raw=true "authorized_keys file")
@@ -61,20 +61,24 @@ Steps to success for Mac to Ubuntu ssh:
   
       ![sshd_config](/ssh_guide/sshd_config.png?raw=true "sshd_config file")
 
-  5) transfer private key (the one without the .pub on it) to Mac (the remote computer, can do via email or scp/rsync)
+  5) transfer private key (the one without the .pub on it) to remote Mac (the remote computer, can do via email or scp/rsync)
 
-  6) set `$ chmod 600` for that key (on remote, make it private, only you see for safety)
+  6) set `$ chmod 600` for that key (on remote Mac, make it private, only you see for safety)
 
-  7) `$ ssh-add key_name` on Mac (this should add this key to your list)
+  7) `$ ssh-add key_name` on remote Mac (this should add this key to your list)
 
-  8) Add key name to `config` file (on remote)
+  8) Add key name to `config` file (on remote Mac)
   
       ![config](/ssh_guide/config.png?raw=true "config file")
   
-  9) restart server ssh with `$ sudo service ssh restart` (on host)
+  9) restart server ssh with `$ sudo service ssh restart` (on host Ubuntu)
   
-  10) connect from Mac with `$ ssh -Y username@IPaddress` or use the hostname after @
+  10) connect from Mac with `$ ssh -Y username@IPaddress` or use the hostname after `@`, either is 
+  fine but the hostname should be more robust in case the IP changes
   
-  11) add to your `.bash_profile` to ssh quickly
+  11) optional but recommended: add to your `.bash_profile` to ssh quickly to the machine (on remote Mac)
   
       ![bash_profile](/ssh_guide/bash_profile.png?raw=true "bash_profile file")
+
+
+
