@@ -50,14 +50,18 @@ Steps to success for Mac to Ubuntu ssh:
 
   3) add pubkey to authorized keys by just copy/paste with vi or any text editor (on host)
       * For this you should just be able to do `cat key_name.pub >> authorized_keys`
+      
+      ![authorized_keys file](/ssh_guide/authorized_keys.png?raw=true "authorized_keys file")
 
-  4) add "sshd_config" file (on host)
+  4) add the `sshd_config` file (on host Ubuntu) to set your personal settings (there is much more safety you can add)
   		* PermitRootLogin no
   		* PubkeyAuthentication yes
   		* RSAAuthentication yes
   		* X11forwarding yes
+  
+      ![sshd_config](/ssh_guide/sshd_config.png?raw=true "sshd_config file")
 
-  5) transfer private key to Mac (to remote, email)
+  5) transfer private key to Mac (the remote computer, can do via email or scp/rsync)
 
   6) set `$ chmod 600` for that key (on remote, make it private)
 
@@ -69,8 +73,6 @@ Steps to success for Mac to Ubuntu ssh:
   
   10) connect from Mac with `$ ssh -Y username@IPaddress` or use the hostname after @
   
-  11) configure the `sshd_config` file on the remote host (Ubuntu or other Linux distro)
+  11) update the `config` file on your Mac
   
-  ![sshd_config](/Linux/ssh_guide/sshd_config.png)
-
-  12) 
+      ![config](/ssh_guide/config.png?raw=true "config file")
