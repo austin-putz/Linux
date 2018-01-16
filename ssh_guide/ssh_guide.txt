@@ -6,6 +6,7 @@
 # Commands
 #========================================#
 
+# files
 vi sshd_config 
 vi ssh_config 
 
@@ -30,13 +31,15 @@ sudo apt-get install openSSH-server
 
 # Steps to success for Mac to Ubuntu ssh
 
-  *) ssh-keygen -t rsa (on host, Ubuntu)
+  *) Create private/public keys 
+  		-) ssh-keygen -t rsa (on host, Ubuntu)
   		-) Enter passphrase (2x)
 
-  *) change permissions, chmod 600 for both private/public key (on host)
+  *) change permissions of files, 
+  		-) chmod 600 for both private/public key (on host)
 
-  *) add pubkey to authorized keys by just copy/paste with vi or any text 
-  		editor (on host)
+  *) add pubkey to authorized_keys file by just copy/paste with vi or any text  (on host)
+  		-) or use cat file >> authorized_keys (which will tack on, but not overwrite the file)
 
   *) add "sshd_config" file (on host)
   		-) PermitRootLogin no
@@ -44,16 +47,32 @@ sudo apt-get install openSSH-server
   		-) RSAAuthentication yes
   		-) X11forwarding yes
 
-  *) transfer private key to Mac (to remote, email)
+  *) transfer private key to Mac (to remote, email or whatever)
 
   *) set chmod 600 for that key (on remote, make it private)
 
   *) "ssh-add key_name" on Mac (remote?)
 
   *) Add key name to config file (on remote)
+  		-) use IdentityFile ~/.ssh/name_of_pk
+		-) NEW: use
+			Host *
+			 AddKeysToAgent yes
+			 UseKeychain yes
+			 IdentityFile ~/.ssh/name_of_pk
+		-) I also add 'ForwardAgent yes' but forget why (?)
 
   *) restart server ssh with "$ sudo service ssh restart" (on host)
   
   *) connect from Mac with "ssh -Y username@IPaddress" or use the hostname after @
+
+  *) update your .bash_profile on the remote to have quick access
+  		-) alias quickconnect='ssh -Y username@my_host_name_whatever'
+		-) then you can simply type 'quickconnect' and you're in!
+
+
+
+
+
 
 
