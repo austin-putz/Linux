@@ -68,4 +68,9 @@ Steps to success for Mac to Ubuntu ssh:
   9) restart server ssh with `$ sudo service ssh restart` (on host)
   
   10) connect from Mac with `$ ssh -Y username@IPaddress` or use the hostname after @
+  
+  11) configure the `sshd_config` file on the remote host (Ubuntu or other Linux distro)
+  
+  ![sshd_config](/Linux/ssh_guide/sshd_config.png)
 
+  12) 
