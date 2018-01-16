@@ -61,18 +61,20 @@ Steps to success for Mac to Ubuntu ssh:
   
       ![sshd_config](/ssh_guide/sshd_config.png?raw=true "sshd_config file")
 
-  5) transfer private key to Mac (the remote computer, can do via email or scp/rsync)
+  5) transfer private key (the one without the .pub on it) to Mac (the remote computer, can do via email or scp/rsync)
 
-  6) set `$ chmod 600` for that key (on remote, make it private)
+  6) set `$ chmod 600` for that key (on remote, make it private, only you see for safety)
 
-  7) `$ ssh-add key_name` on Mac (remote?)
+  7) `$ ssh-add key_name` on Mac (this should add this key to your list)
 
-  8) Add key name to config file (on remote)
-
+  8) Add key name to `config` file (on remote)
+  
+      ![config](/ssh_guide/config.png?raw=true "config file")
+  
   9) restart server ssh with `$ sudo service ssh restart` (on host)
   
   10) connect from Mac with `$ ssh -Y username@IPaddress` or use the hostname after @
   
-  11) update the `config` file on your Mac
+  11) add to your `.bash_profile` to ssh quickly
   
-      ![config](/ssh_guide/config.png?raw=true "config file")
+      ![bash_profile](/ssh_guide/bash_profile.png?raw=true "bash_profile file")
