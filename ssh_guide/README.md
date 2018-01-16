@@ -39,7 +39,9 @@ vi sshd_config
 vi ssh_config 
 ```
 
-## Steps to Success
+# Steps to Success
+
+***
 
 Steps to success for Mac to Ubuntu ssh:
 
@@ -80,5 +82,5 @@ Steps to success for Mac to Ubuntu ssh:
   
       ![bash_profile](/ssh_guide/bash_profile.png?raw=true "bash_profile file")
 
-
+***
 
