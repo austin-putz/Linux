@@ -41,6 +41,7 @@ Steps to success for Mac to Ubuntu ssh:
   2) change permissions, `$ chmod 600` for both private/public key (on host)
 
   3) add pubkey to authorized keys by just copy/paste with vi or any text editor (on host)
+      * For this you should just be able to do `cat key_name.pub >> authorized_keys`
 
   4) add "sshd_config" file (on host)
   		* PermitRootLogin no
