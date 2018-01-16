@@ -27,8 +27,8 @@ sudo service ssh status (host)
 
 ```bash
 # Must install software on host (Ubuntu machine)
-sudo apt-get install openSSH-client 
-sudo apt-get install openSSH-server
+sudo apt-get install openssh-client 
+sudo apt-get install openssh-server
 ```
 
 ## Steps to Success
