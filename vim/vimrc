@@ -1,0 +1,83 @@
+ ".vimrc
+ " 
+ " move this file to your HOME directory (~/ or /home/username/) and put a period at the front to make 
+ " it a hidden file
+
+" Customize my vim program
+
+" Syntax highlighting ON
+syntax on
+
+" Set 256 color mode
+set t_Co=256
+
+" Show numbers on side
+set number
+
+" Set Colorscheme
+"if exists('+colorcolumn')
+"  set colorcolumn=80
+"else
+"  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+"endif
+
+"colorscheme murphy
+colorscheme desert
+
+" turn off beeping
+set visualbell
+
+" Search Options
+set incsearch
+set ignorecase
+set smartcase
+set showmatch
+
+" set visual bell
+" set visualbell
+
+" Show current position
+set ruler
+
+" 1 tab = 4 spaces
+set shiftwidth=4
+set tabstop=4
+
+" smart indent
+set si
+
+" show current mode
+set showmode
+
+" Highlight current line while in insert mode
+autocmd InsertEnter,InsertLeave * set cul!
+
+" Set line numbers to gray
+highlight LineNr ctermfg=grey ctermbg=black
+
+" save folds
+" autocmd BufWrite * mkview
+" autocmd BufRead * silent loadview
+" autocmd BufWinLeave * mkview
+" autocmd BufWinEnter * silent loadview
+" autocmd BufWinLeave * if expand("%") != "" | mkview | endif
+" autocmd BufWinEnter * if expand("%") != "" | loadview | endif
+
+" stop going into ex mode
+nnoremap Q <nop>
+
+" stop highlighting
+" nnoremap <silent> <C-1> :nohl<CR><C-1>
+
+" turn on finding filetypes
+" filetype plugin indent on
+" au FileType R set1 sw=2 sts=2 et  " look in ftplugin folder to find these files and set!
+
+"
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
+
+
+" julia support
+"Plugin 'JuliaEditorSupport/julia-vim'
+
