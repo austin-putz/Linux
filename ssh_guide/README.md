@@ -4,12 +4,23 @@ Guide to ssh into a Linux system. My experience is from Mac to Ubuntu. If you ar
 
 Most everything should be contained in your `.ssh/` folder from your `$HOME` directory. If you are not familiar this, it would be in your `/Users/username/` folder on Mac or `/home/username/` folder on Ubuntu (Linux). The three main files are `authorized_keys`, `known_hosts`, `sshd_config`, and the `config` file on your Mac. Public keys get added to your `authorized_keys` file (as text). You can edit the `sshd_config` file to change many settings that you will need to make your computer safer and easier to use off ssh. 
 
-Use the following links for your GitHub account!
+
+
+
+## SSH to GitHub
+
+Use the following links to connect via SSH to your GitHub account:
 
 1. [Get a key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 2. [Add key to your account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+3. [Test Connection](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
 
 Then you should be good to go!
+
+
+
+
+## General SSH How-To
 
 # Install Software on Host
 
