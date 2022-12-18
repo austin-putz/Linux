@@ -1,8 +1,21 @@
 # ssh guide
 
-Guide to ssh into a Linux system. My experience is from Mac to Ubuntu. If you are going from Windows you will need [putty](http://www.putty.org/). Linux to Linux should work very similar. To the best of my knowledge, there are no differences between different distros, but I could be wrong. 
+This is a general guide to ssh. My experience is from Apple (MacBook Pro) to Ubuntu. If you are going from Windows you will need [putty](http://www.putty.org/). Linux to Linux should work very similar to this guide below (but not tested). To the best of my knowledge, there are no differences between different distros, but I could be wrong. 
 
-Most everything should be contained in your `.ssh/` folder from your `$HOME` directory. If you are not familiar this, it would be in your `/Users/username/` folder on Mac or `/home/username/` folder on Ubuntu (Linux). The three main files are `authorized_keys`, `known_hosts`, `sshd_config`, and the `config` file on your Mac. Public keys get added to your `authorized_keys` file (as text). You can edit the `sshd_config` file to change many settings that you will need to make your computer safer and easier to use off ssh. 
+Most everything should be contained in your `~/.ssh/` folder from your `$HOME` directory. If you are not familiar this, it would be in your `/Users/username/` folder on Mac or `/home/username/` folder on Ubuntu (Linux). The main files are:
+
+* `authorized_keys`
+* `known_hosts`
+* `sshd_config`
+* `config` 
+
+Public keys get added to your `authorized_keys` file (as text). You can edit the `sshd_config` file to change many settings that you will need to make your computer safer and easier to use off ssh. Add key names to your `config` file when necessary. 
+
+## What is ssh?
+
+"The Secure Shell Protocol (SSH) is a cryptographic network protocol for operating network services securely over an unsecured network. Its most notable applications are remote login and command-line execution. 
+
+SSH applications are based on a client–server architecture, connecting an SSH client instance with an SSH server. SSH operates as a layered protocol suite comprising three principal hierarchical components: the transport layer provides server authentication, confidentiality, and integrity; the user authentication protocol validates the user to the server; and the connection protocol multiplexes the encrypted tunnel into multiple logical communication channels." - ![Wikipedia](https://en.wikipedia.org/wiki/Secure_Shell)
 
 
 
