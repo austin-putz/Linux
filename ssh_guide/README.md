@@ -30,6 +30,7 @@ Use the following links to connect via SSH to your GitHub account:
 4. [Link your directories](https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/adding-locally-hosted-code-to-github)
 5. [Link to access and push content to GitHub](https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls)
 6. [Create access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+7. [GitHub CLI / command line tools](https://cli.github.com/)
 
 Then you should be good to go!
 
