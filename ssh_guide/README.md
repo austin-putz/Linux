@@ -27,6 +27,7 @@ Use the following links to connect via SSH to your GitHub account:
 1. [Get a key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 2. [Add key to your account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 3. [Test Connection](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
+4. [Link your directories](https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/adding-locally-hosted-code-to-github)
 
 Then you should be good to go!
 
