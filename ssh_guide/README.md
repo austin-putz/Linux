@@ -22,7 +22,7 @@ Then you should be good to go!
 
 ## General SSH How-To
 
-# Install Software on Host
+### Install Software on Host
 
 ```bash
 # Must install software on host (Ubuntu machine)
@@ -30,27 +30,27 @@ sudo apt-get install openssh-client
 sudo apt-get install openssh-server
 ```
 
-# check ssh
+### check ssh
 
 ```bash
 sudo service ssh status (host)
 ```
 
-# restart ssh after installing or editing
+### restart ssh after installing or editing
 
 ```bash
 sudo restart ssh (host)
 sudo systemctl restart ssh
 ```
 
-# Files to edit
+### Files to edit
 
 ```bash
 vi sshd_config 
 vi ssh_config 
 ```
 
-# Steps to Success
+### Steps to Success
 
 ***
 
