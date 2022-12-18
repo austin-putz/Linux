@@ -32,7 +32,9 @@ Use the following links to connect via SSH to your GitHub account:
 6. [Create access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 7. [GitHub CLI / command line tools](https://cli.github.com/)
 
-Then you should be good to go!
+GitHub no longer allows password access you have to download [Homebrew](https://brew.sh/) on Mac and then install GitHub CLI with `brew install gh` from the command line. After this you need to login with `gh auth login`. 
+
+This may change in the future, if it does, let me know. 
 
 
 
