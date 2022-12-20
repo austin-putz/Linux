@@ -40,8 +40,7 @@ My full `.vimrc` file is attached. Just place it in your HOME directory (`~/`) a
 
 ## ssh guide
 
-This guide should help new users with ssh. It's the guide I use everytime I forget how to 
-ssh from my Mac to my Ubuntu machine, but should work for any UNIX/Linux system I think. 
+This guide should help new users with ssh. 
 
 ## File Extension Highlighting
 
