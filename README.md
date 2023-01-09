@@ -3,7 +3,7 @@
 This page will hopefully include helpful Unix/Linux scripts for 
 animal breeders and data analysts. 
 
-## vim
+## vim editor
 
 vim is a command line text editor. You can alter the `~/.vimrc` file with all sorts of options to make vim custom to your liking. 
 
