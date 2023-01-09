@@ -40,7 +40,12 @@ My full `.vimrc` file is attached. Just place it in your HOME directory (`~/`) a
 
 ## ssh guide
 
-This guide should help new users with ssh. 
+This guide should help new users with ssh. SSH stands for secure shell protocol. 
+It's a way for us to interact and use remote computers. We can either ssh into a 
+remote server or use ssh to transfer files via scp for instance. 
+
+You should learn about private and public keys, so please do some self reading on those first.
+![Learn SSH](https://en.wikipedia.org/wiki/Secure_Shell) 
 
 ## File Extension Highlighting
 
