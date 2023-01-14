@@ -27,6 +27,13 @@ If you go into the .dircolors file on your server, you can see the extensions th
 
 in the `.dircolors` file. 
 
+You need to make sure to add the `--color` option to ls with an alias in your `.bash_profile` or `.bashrc`
+
+```bash
+alias ls='ls --color'
+alias ll='ls -lph --color'
+```
+
 ## Other Systems
 
 After moving to a CentOS HPC, I had to copy with dir_colors file from `/etc/`. Copy the file like this
@@ -37,4 +44,11 @@ cp /etc/DIR_COLORS ~/.dir_colors
 
 Then simply edit your new `.dir_colors` file with vi or whatever editor you use. 
 
+Or alternatively you can create a raw `.dircolors` file with:
+
+```bash
+dircolors -p > .dircolors
+```
+
+from your `$HOME` directory.
 
